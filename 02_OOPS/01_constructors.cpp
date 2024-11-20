@@ -63,5 +63,8 @@ int main()
     print(s6);
     print(s1);
 
-    
+    Student s7(s1); // just a different method of representing (s7=s1)....
+    s7.name="mukesh";
+    print(s7);
+    print(s1);
 }
