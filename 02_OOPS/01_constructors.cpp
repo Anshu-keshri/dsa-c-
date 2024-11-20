@@ -17,13 +17,18 @@ class Student{
             roll_no=r;
             cgpa=c;
         }
+        Student(int r,string n,float c){
+            name=n;
+            roll_no=r;
+            cgpa=c;
+        }
 
 
 
 };
 
-void print(Student& s){
-    cout<<"Deatil of student 1 is: "<<s.name<<s.roll_no<<s.cgpa<<"\n";
+void print(Student s){
+    cout<<"Deatil of student is: "<<s.name<<" "<<s.roll_no<<" "<<s.cgpa<<"\n";
 }
 
 int main()
@@ -43,4 +48,20 @@ int main()
     
     print(s1);
     print(s2);
+
+    // NOW USING CONSTRUCTOR METHOD TO GIVE THE VALUES...
+    Student s3("anshu keshri",1111,8.3);
+    Student s4(1122,"Anshu",9.4);
+
+    print(s3);
+    print(s4);
+
+    //SOME OF THE IMP. PROP. OF CONSTRUCTORS.....
+
+    Student s6=s1; // this takes a copy of s1...(DEEP COPY)
+    s6.name="Keshri"; // do not make changes in the main s1...
+    print(s6);
+    print(s1);
+
+    
 }
