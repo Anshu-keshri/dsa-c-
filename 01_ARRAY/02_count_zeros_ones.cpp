@@ -22,7 +22,9 @@ void count(int arr[],int size){
 
 int main()
 {
-    int arr[7]={0,0,1,1,0,1,0};
-    count(arr,7);
+    int arr[]={0,1,0,1,0,1,1,0,0,1,1,0,1,0};
+    int size=sizeof(arr)/sizeof(arr[0]);
+    cout<<"size of array is: "<<size<<"\n";
+    count(arr,size);
 
 }
